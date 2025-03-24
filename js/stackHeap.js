@@ -21,19 +21,19 @@ let state = null;
 let n1 = 10;
 let n2 = n1;
 n2 = 20;
-console.log(n1);
+// console.log(n1);
 
 // 2: HEAP MEMORY  ---> Used for reference datatypes ---> Allocated dynamically & accessed via reference
 
 // Object ---> use typeof value to get the type on any value
 let actualAge = 23;
-console.log(typeof age); // ---> type of age is number
+// console.log(typeof age); // ---> type of age is number
 
 let stateRef = null;
-console.log(typeof null); //  ---> type of null is object
+// console.log(typeof null); //  ---> type of null is object
 
 let name2;
-console.log(typeof name2); // ---> type of name is undefined
+// console.log(typeof name2); // ---> type of name is undefined
 
 // CODE
 let obj1 = {
@@ -41,4 +41,12 @@ let obj1 = {
 };
 let obj2 = obj1;
 obj2.name = "Hamza";
-console.log(obj1);
+// console.log(obj1);
+
+let myName = "Moeez";
+myName = "Tariq";
+
+let anotherName = "myName";
+// console.log(anotherName);
+
+// console.log(myName);
