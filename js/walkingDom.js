@@ -15,17 +15,17 @@ console.log(document.body.lastElementChild); // ---> returns the script element
 console.log(document.body.children); // ---> returns an HTMLCollection
 
 // 1: firstChild ---> returns the first child of an element
-console.log(document.body.firstChild);
+console.log(document.body.firstChild); // ---> returns the text node
 
 // 2: lastChild ---> returns the last child of an element
-console.log(document.body.lastChild);
+console.log(document.body.lastChild); // ---> returns the script element
 
 // 3: childNodes ---> returns a NodeList
-console.log(document.body.childNodes);
+console.log(document.body.childNodes); // ---> returns a NodeList
 
 // ---> following is always true:
-element.childNodes[0] === element.firstChild;
-element.childNodes[element.childNodes.length - 1] === element.lastChild;
+element.childNodes[0] === element.firstChild; // ---> returns true
+element.childNodes[element.childNodes.length - 1] === element.lastChild; // ---> returns true
 
 // 2: ---> PARENT & SIBLING OF AN ELEMENT
 
