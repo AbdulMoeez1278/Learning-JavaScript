@@ -1,0 +1,2 @@
+// insertAdjacentHTML | insertAdjacentElement | insertAdjacentText 
+
