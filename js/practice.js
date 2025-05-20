@@ -117,7 +117,6 @@ console.log(10 !== "10");
 // 5: Write a condition using && to check if:
 // Age is above 18 AND
 // User is verified (boolean)
-
 let age = 20;
 let isVerified = true;
 if (age > 18 && isVerified) {
@@ -127,7 +126,6 @@ if (age > 18 && isVerified) {
 // 6: Write a condition using || to check if:
 // Age is less than 18 OR
 // User is not verified
-
 let age2 = 10;
 let isVerifiedAge = true;
 if (age2 < 18 || !isVerifiedAge) {
@@ -157,3 +155,21 @@ console.log(fullName.charAt(fullName.length - 1)); // last character
 
 // 5: Replace your first name with a nickname.
 console.log(fullName.replace("Abdul Moeez Tariq", "Moizy"));
+
+// 6: Create a sentence like "I love JavaScript!", then check if it includes the word "love".
+let sentence = "I love JavaScript!";
+console.log(sentence.includes("love"));
+
+// 7: Split the sentence "HTML,CSS,JavaScript" into an array.
+let languages = "HTML,CSS,JavaScript";
+let languagesArray = languages.split(",");
+console.log(languagesArray);
+
+// 8: Trim the extra spaces from " Frontend Developer " and print the result.
+let designation = " Frontend Developer ";
+console.log(designation.trim());
+
+// 9: Use slice/substring to extract "Script" from "JavaScript".
+let extractString = "JavaScript";
+console.log(extractString.substring(4, 10));
+console.log(extractString.slice(4, 10));
