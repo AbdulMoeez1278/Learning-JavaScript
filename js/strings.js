@@ -149,6 +149,16 @@ console.log(joinedString); // Output: "Abdul-Moeez-Tariq"
 const repeatedString = "Abdul ".repeat(3);
 console.log(repeatedString); // Output: "Abdul Abdul Abdul"
 
+let str = "hello";
+for (let i = 0; i < str.length; i++) {
+  console.log(str.charAt(i)); // Output: h e l l o
+}
+
+let sentence2 = "JavaScript is fun";
+let words = sentence2.split(" "); // splits converts the string into an array
+console.log(words); // Output: ["JavaScript", "is", "fun"]
+words.forEach((word) => console.log(word.toUpperCase())); // forEach loop works with arrays
+
 // Array Sort Method
 // const numbers = [5, 2, 8, 1, 9, 4, 7];
 // const sortedNumbers = numbers.sort((a, b) => a - b);
