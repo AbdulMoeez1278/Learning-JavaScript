@@ -86,6 +86,21 @@ for (let values of word) {
 let e = 10;
 
 while (e > 0) {
-  console.log("Number is: ", e);
+  console.log("The Number is: ", e);
   e--;
+}
+
+// 5: Loop through an object and print keys and values (for...in).
+const obj3 = { a: 1, b: 2, c: 3 };
+for (let key in obj3) {
+  // for...in loop: iterates over all enumerable property keys (including inherited properties) of an object.
+  console.log("The Key is: ", key);
+  console.log(key, obj3[key]);
+  // console.log(`${key}: ${obj3[key]}`);
+}
+
+const str = "Hello";
+
+for (const char of str) {
+  console.log(`The character is: ${char}`);
 }
