@@ -2,16 +2,17 @@
 
 const myArr = [0, 1, 2, 3, 4, 5];
 // console.log(myArr[3]);
+console.log(myArr);
 
 const myHeroes = ["ironman", "hulk", "Thor"];
 // console.log(myHeroes[2])
 
-// Array METHODS --->
+// <--- Array METHODS --->
 
 // 1: push METHOD ---> add a values | elements at the end of the array
 myArr.push(6);
 myArr.push(7);
-// console.log(myArr);
+console.log(myArr);
 
 // 2: pop METHOD ---> removes the value | element at the end
 myArr.pop(6);
@@ -83,3 +84,90 @@ let scoreThree = 300;
 
 // 14: of METHOD
 // console.log(Array.of(scoreOne, scoreTwo, scoreThree));
+
+// empty array
+let array = [];
+// console.log(array);
+
+let dailyActivities = ["eat", "work", "sleep"];
+
+// change the second element
+// use array index 1
+dailyActivities[1] = "exercise";
+
+// console.log(dailyActivities);
+
+// Creating an Array and Initializing with Values
+// let a = ["HTML", "CSS", "JS"];
+// console.log(a);
+
+// a[1] = "Bootstrap";
+// console.log(a);
+
+// Creating an Array and Initializing with Values
+let a = ["Ahmad", "Moeez", "Zaid"];
+// console.log("Original Array: " + a);
+
+// Removes and returns the last element
+let last = a.pop();
+// console.log("After Removing the last: " + a);
+
+// Removes and returns the first element
+let first = a.shift();
+// console.log("After Removing the First: " + first);
+
+// Removes 2 elements starting from index 1
+a.splice(1, 2);
+// console.log("After Removing 2 elements starting from index 1: " + a);
+
+// increase and decrease array length
+// Creating an Array and Initializing with Values
+let a1 = ["HTML", "CSS", "JS"];
+
+// Increase the array length to 7
+a1.length = 7;
+
+// console.log("After Increasing Length: ", a1);
+
+// Decrease the array length to 2
+a1.length = 2;
+// console.log("After Decreasing Length: ", a1);
+
+// Shallow copy
+// const original = { a: 1, b: { c: 2 } };
+// const shallowCopy = { ...original };
+// shallowCopy.b.c = 3;
+// console.log(original.b.c); // Output: 3 (original object changed)
+
+// // Deep copy
+// const originalArr = { a: 1, b: { c: 2 } };
+// const deepCopy = JSON.parse(JSON.stringify(originalArr));
+// deepCopy.b.c = 3;
+// console.log(originalArr.b.c); // Output: 2 (original object remains unchanged)
+
+// another example of shallowCopy
+// const name = { firstName: "Moeez" };
+// const shallow = { ...name };
+// shallow.firstName = "Abdul";
+// console.log(name.firstName); // does not change the name // name stilll be Moeez
+
+// shallow copy
+let myName = { person: { firstName: "Moeez" } };
+let shallowCopy = { ...myName };
+shallowCopy.person.firstName = "Abdul";
+console.log(myName.person.firstName); // If your object had nested properties (e.g., name = { person: { firstName: "Moeez" }}), then modifying shallowCopy.person.firstName would affect the original object.
+
+// deep copy
+let originalArr = { person: { firstName: "Abdul", lastName: "Moeez" } };
+let deepCopy = JSON.parse(JSON.stringify(originalArr));
+deepCopy.person.lastName = "Tariq";
+console.log(originalArr.person.lastName); // creates a completely independent copy of the object and all its nested objects, ensuring no shared data or modifications between the copies. Each object is stored in a separate memory location, making them entirely independent.
+
+let array1 = ["Ali", "Bilal", "Moeez"];
+let array2 = ["Hamza", "Sohaib", "Rameez"];
+
+let arrays = array1.join(array2);
+let arraysTwo = array1.concat(array2);
+
+console.log(arrays);
+console.log(arraysTwo);
