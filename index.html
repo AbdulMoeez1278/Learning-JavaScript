@@ -60,6 +60,7 @@
         }
 
         .btn {
+            margin-top: 20px;
             padding: 10px 14px;
             color: white;
             border: none;
@@ -71,7 +72,18 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: #212121; color: white;">
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div> -->
+
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>JavaScript</li>
+    </ul>
     <!-- Accessing the childrens of an element -->
     <div>
         <h1 id="myText" style="padding: 12px 10px; border-radius: 12px;"></h1>
@@ -110,9 +122,23 @@
         </div>
     </div> -->
 
-    <div id="button" class="button">
+    <!-- <div id="button" class="button">
         <button id="innerButton" class="btn" type="button">Click Me</button>
+    </div> -->
+
+    <div>
+        <label>Enter Value 1: </label>
+        <input type="text" id="value1" />
+        <br />
+        <br />
+        <label>Enter Value 2: </label>
+        <input type="text" id="value2" />
+        <br />
+        <button id="formButton" class="btn">Click To Add</button>
+        <!-- <button class="btn" onclick="addTwoNumbers()">Click To Add</button> -->
+        <p id="result"></p>
     </div>
+
     <!-- <button type="button">Player 1: Chris</button>
 
 
@@ -189,8 +215,10 @@
     <!-- <script src="js/arrays.js"></script> -->
 
     <!-- 29-05-2025 (1) -->
-    <!-- <script src="js/walkingDom.js"></script> -->
-    <script src="js/DOMproperties.js"></script>
+    <!-- <script src="js/DOMproperties.js"></script> -->
+
+    <!-- 30-05-2025 (1) -->
+    <script src="js/walkingDom.js"></script>
 </body>
 
 </html>
