@@ -32,3 +32,20 @@ setTimeout(function () {
 setTimeout(function () {
   console.log("This message is displayed after 3 seconds");
 }, 3000); // This will log the message after 3 seconds
+
+// Example of using setTimeout with a function
+function delayedMessage() {
+  console.log("This message is displayed after 4 seconds");
+}
+setTimeout(delayedMessage, 4000); // This will log the message after 4 seconds
+
+// Example of using setInterval to create a countdown
+let countdown = 5;
+const countdownInterval = setInterval(function () {
+  console.log("Countdown:", countdown);
+  countdown--;
+  if (countdown < 0) {
+    clearInterval(countdownInterval);
+    console.log("Countdown finished");
+  }
+}, 1000); // This will log the countdown every second until it reaches 0
