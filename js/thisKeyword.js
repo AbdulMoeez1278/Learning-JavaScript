@@ -58,3 +58,33 @@ class MyClass {
 const myInstance = new MyClass("My Instance");
 myInstance.showThis(); // Logs the myInstance object
 
+// 9. In a method of an object, 'this' refers to the object itself
+const anotherObj = {
+  name: "Another Object",
+  showThis: function () {
+    console.log(this);
+  },
+};
+anotherObj.showThis(); // Logs the anotherObj object
+
+// 10. In a function called with call or apply, 'this' refers to the first argument passed to call or apply
+function showThisWithCall() {
+  console.log(this);
+}
+showThisWithCall.call({ name: "Called Object" }); // Logs the object passed to call
+
+// 11. In a function called with bind, 'this' refers to the object passed to bind
+function showThisWithBind() {
+  console.log(this);
+}
+const boundFunction = showThisWithBind.bind({ name: "Bound Object" });
+boundFunction(); // Logs the object passed to bind
+
+// 12. In a method of an object, 'this' can be explicitly set using call, apply, or bind
+function showThisExplicitly() {
+  console.log(this);
+}
+showThisExplicitly.call({ name: "Explicit Object" }); // Logs the object passed to call
+// showThisExplicitly.apply({ name: "Explicit Object" }); // Logs the object passed to apply
+// const boundExplicitFunction = showThisExplicitly.bind({ name: "Bound Explicit Object" });
+// boundExplicitFunction(); // Logs the object passed to bind
