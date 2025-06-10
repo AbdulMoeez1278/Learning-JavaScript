@@ -112,3 +112,11 @@ const fetchUserData = (callback) => {
 fetchUserData((data) => {
   console.log("User Data:", data); // Output after 1 second: User Data: { id: 1, name: "John Doe" }
 });
+
+// Example of an arrow function with a timeout
+const delayedGreeting = (name) => {
+  setTimeout(() => {
+    console.log(`Hello, ${name}!`);
+  }, 1500); // Output after 1.5 seconds: Hello, Alice!
+};
+delayedGreeting("Alice");
