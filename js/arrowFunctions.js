@@ -120,3 +120,8 @@ const delayedGreeting = (name) => {
   }, 1500); // Output after 1.5 seconds: Hello, Alice!
 };
 delayedGreeting("Alice");
+
+// Example of an arrow function with a filter method
+const numbersArray = [1, 2, 3, 4, 5, 6];
+const evenNumbersArray = numbersArray.filter((num) => num % 2 === 0);
+console.log(evenNumbersArray); // Output: [2, 4, 6]
