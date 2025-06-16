@@ -26,5 +26,5 @@ console.log(oddNumbers);
 const reduceNumbers = [1, 2, 3, 4];
 const sum = reduceNumbers.reduce(
   (accumulator, number) => accumulator + number,
-  0
+  0 // The accumulator parameter is the single value that will be returned by the reduce() method. It will contain the value returned by the callback function in each iteration.
 );
