@@ -49,3 +49,10 @@ console.log("End of script");
 // function syncSecondTask() {
 //   console.log("Synchronous second task");
 // }
+
+// callback function to be executed on timeout
+setTimeout(myFunction, 5000); // myFunction is passed to setTimeout as an argument
+
+function myFunction() { // myFunction is used as a callback
+  document.getElementById("myText").innerHTML = "Hello World!!";
+}
