@@ -87,25 +87,48 @@
 // });
 
 // function passes as an argument to another function
-function Hello(callback) {
-  console.log("Hello!");
-  callback();
-  //   return callback();
+// function Hello(callback) {
+//   console.log("Hello!");
+//   callback();
+//   //   return callback();
+// }
+
+// function goodbye() {
+//   console.log("Goodbye!");
+// }
+
+// Hello(goodbye);
+
+// // callback with array
+// function forEachElement(arr, callback) {
+//   for (let i = 0; i < arr.length; i++) {
+//     callback(arr[i], i);
+//   }
+// }
+// // using the function
+// forEachElement([1, 2, 3], (element, index) => {
+//   console.log(`Element ${index}: ${element * 2}`);
+// });
+
+function myDisplayer(some) {
+  document.getElementById("myText").innerHTML = some;
 }
 
-function goodbye() {
-  console.log("Goodbye!");
+function myFirst() {
+  myDisplayer("Hello");
 }
 
-Hello(goodbye);
-
-// callback with array
-function forEachElement(arr, callback) {
-  for (let i = 0; i < arr.length; i++) {
-    callback(arr[i], i);
-  }
+function mySecond() {
+  myDisplayer("Goodbye");
 }
-// using the function
-forEachElement([1, 2, 3], (element, index) => {
-  console.log(`Element ${index}: ${element * 2}`);
-});
+
+mySecond();
+myFirst();
+
+function myCalculator(num1, num2) {
+  let sum = num1 + num2;
+  console.log(sum);
+  //   myDisplayer(sum);
+}
+
+myCalculator(5, 5);
