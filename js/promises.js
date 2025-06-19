@@ -8,14 +8,14 @@
 //     }
 // });
 
-let p = new Promise((resolve, reject) => {
-  let isTrue = true;
-  if (isTrue) {
-    resolve("Promise resolved");
-  } else {
-    reject("Promise rejected");
-  }
-});
+// let p = new Promise((resolve, reject) => {
+//   let isTrue = true;
+//   if (isTrue) {
+//     resolve("Promise resolved");
+//   } else {
+//     reject("Promise rejected");
+//   }
+// });
 
 // storing promise in variable
 // const promise = new Promise(function (resolve, reject) {
@@ -41,63 +41,99 @@ let p = new Promise((resolve, reject) => {
 //   console.log("Another async task resolved");
 // });
 
-// third promise
-const promiseThree = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    resolve({ username: "Moeez", email: "moeez@gmail.com" });
-  }, 2000);
-});
+// // third promise
+// const promiseThree = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     resolve({ username: "Moeez", email: "moeez@gmail.com" });
+//   }, 2000);
+// });
 
-promiseThree.then(function (user) {
-  console.log(user);
-});
+// promiseThree.then(function (user) {
+//   console.log(user);
+// });
 
 // fourth promise
-const promiseFourth = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    let error = false;
-    // let error = true;
-    if (!error) {
-      resolve({ username: "Moeez", password: "123" });
-    } else {
-      reject("ERROR: Something went wrong");
-    }
-  }, 2000);
-});
+// const promiseFourth = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     let error = false;
+//     // let error = true;
+//     if (!error) {
+//       resolve({ username: "Moeez", password: "123" });
+//     } else {
+//       reject("ERROR: Something went wrong");
+//     }
+//   }, 2000);
+// });
 
-promiseFourth
-  .then((user) => {
-    console.log(user);
-    return user.username;
-  })
-  .then((username) => {
-    console.log(username);
-    // return user.username;
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .finally(() => console.log("The promise is eihter resolved or rejected"));
+// promiseFourth
+//   .then((user) => {
+//     console.log(user);
+//     return user.username;
+//   })
+//   .then((username) => {
+//     console.log(username);
+//     // return user.username;
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   })
+//   .finally(() => console.log("The promise is eihter resolved or rejected"));
 
 // promise five
-const promiseFive = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    let error = true;
-    if (!error) {
-      resolve({ username: "Javascript", password: "123" });
-    } else {
-      reject("ERROR: JS went wrong");
-    }
-  }, 2000);
+// const promiseFive = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     let error = true;
+//     if (!error) {
+//       resolve({ username: "Javascript", password: "123" });
+//     } else {
+//       reject("ERROR: JS went wrong");
+//     }
+//   }, 2000);
+// });
+
+// async function consumePromiseFive() {
+//   try {
+//     const response = await promiseFive;
+//     console.log(response);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// consumePromiseFive();
+
+// // sixth promise
+// const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Hello");
+//   }, 300);
+// });
+
+// myPromise.then((greet) => {
+//   console.log(greet);
+// });
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// Seventh promise
+const promiseA = new Promise((resolve, reject) => {
+  resolve(777);
+  //   resolve("Hello World");
 });
 
-async function consumePromiseFive() {
-  try {
-    const response = await promiseFive;
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
-}
+promiseA.then((value) => console.log("asynchronus logging has value:", value));
+// promiseA.then((data) => console.log("asynchronus logging has Text:", data));
 
-consumePromiseFive();
+console.log("immediate logging");
+
+// promise related to the promise success
+const myPromiseP = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Success!");
+  }, 250);
+});
+
+myPromiseP.then((successMessage) => {
+  console.log(`Yay! ${successMessage}`);
+});
