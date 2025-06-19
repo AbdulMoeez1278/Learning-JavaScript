@@ -137,3 +137,128 @@ const myPromiseP = new Promise((resolve, reject) => {
 myPromiseP.then((successMessage) => {
   console.log(`Yay! ${successMessage}`);
 });
+
+// promise chaining
+// // Promise practice using promise chaining
+// let p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("Resolved after 2 seconds");
+//   }, 2000);
+// });
+
+// p1.then((value) => {
+//   console.log(value);
+//   let p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Promise 2");
+//     }, 2000);
+//   });
+//   return p2;
+// })
+//   .then((value) => {
+//     console.log("We are done");
+//     return 2;
+//   })
+//   .then((value) => {
+//     console.log("We are done again");
+//   });
+
+// load script function using promises
+const loadScript = (src) => {
+  return new Promise((resolve, reject) => {
+    let script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = src;
+    document.body.appendChild(script);
+    script.onload = () => {
+      resolve(1);
+    };
+    script.onerror = () => {
+      reject(0);
+    };
+  });
+};
+
+let loadScriptPromise = loadScript("http://localhost:5500");
+loadScriptPromise
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => {
+    console.log("Error: ", error);
+  });
+
+// promise methods
+let newPromiseOne = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise resolved");
+  }, 2000);
+});
+
+let newPromiseTwo = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Another promise resolved");
+  }, 3000);
+});
+
+let newPromiseThree = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Third promise resolved");
+  }, 4000);
+});
+
+// Promise.all // waits for all promises to resolve
+// If any promise is rejected, it will reject the entire Promise.all
+// It returns an array of resolved values in the same order as the promises were passed
+// It is useful when you want to wait for multiple asynchronous operations to complete before proceeding
+// It will reject if any promise is rejected, otherwise it will resolve with an array of values
+
+Promise.all([newPromiseOne, newPromiseTwo, newPromiseThree])
+  .then((values) => {
+    console.log("All promises resolved:", values);
+  })
+  .catch((error) => {
+    console.log("Error in one of the promises:", error);
+  });
+
+// Promise
+// .allSettled //  waits for all promises to settle (either resolved or rejected)
+// It returns an array of objects with the status and value or reason of each promise
+// It does not reject if any promise is rejected
+// It is useful when you want to know the outcome of all promises, regardless of whether they were resolved or rejected
+
+Promise.allSettled([newPromiseOne, newPromiseTwo, newPromiseThree])
+  .then((results) => {
+    console.log("All promises settled:", results);
+  })
+  .catch((error) => {
+    console.log("Error in one of the promises:", error);
+  });
+
+// Promise
+// .race // returns a promise that resolves or rejects as soon as one of the promises in the array resolves or rejects
+// It returns the value of the first settled promise
+// It is useful when you want to wait for the first completed operation among multiple promises
+// It will reject if the first promise is rejected, otherwise it will resolve with the value of the first resolved promise
+
+Promise.race([newPromiseOne, newPromiseTwo, newPromiseThree])
+  .then((value) => {
+    console.log("First promise resolved:", value);
+  })
+  .catch((error) => {
+    console.log("Error in the first promise:", error);
+  });
+
+// Promise
+// .any // returns a promise that resolves as soon as one of the promises in the array resolves
+// If all promises are rejected, it rejects with an AggregateError containing all rejection reasons
+// It is similar to Promise.race, but it ignores rejections and only resolves with the first fulfilled promise
+// It is useful when you want to wait for the first successful operation among multiple promises
+
+Promise.any([newPromiseOne, newPromiseTwo, newPromiseThree])
+  .then((value) => {
+    console.log("First fulfilled promise:", value);
+  })
+  .catch((error) => {
+    console.log("All promises were rejected:", error);
+  });
