@@ -87,7 +87,7 @@ try {
   console.log("Finally Clause is running");
 }
 
-// ..  JS - PRACTICE  ..
+// ...  JS - PRACTICE  ...
 
 // let arr = [
 //   {
