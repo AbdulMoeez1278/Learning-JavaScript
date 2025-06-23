@@ -87,6 +87,25 @@ try {
   console.log("Finally Clause is running");
 }
 
+// ----
+const p = new Promise((res, rej) => {
+  res(1);
+});
+
+async function asyncReturn() {
+  return p; 
+}
+
+function basicReturn() {
+  return Promise.resolve(p);
+}
+
+console.log(p); // returns the fulfilled promise with its prototype, promise state and the promise result
+console.log("p"); // returns a value as a string
+console.log(p === basicReturn()); // true
+console.log(p === asyncReturn()); // false
+console.log(asyncReturn === basicReturn); // false
+
 // ...  JS - PRACTICE  ...
 
 // let arr = [
