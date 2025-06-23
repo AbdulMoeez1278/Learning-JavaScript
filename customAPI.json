@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "title": "Celestial Chronicles",
+      "genre": ["Action", "Fantasy"],
+      "episodes": 12,
+      "rating": 8.6,
+      "release_year": 2023,
+      "studio": "StarForge Studios"
+    },
+    {
+      "id": 2,
+      "title": "Tokyo Drift Spirits",
+      "genre": ["Sports", "Drama"],
+      "episodes": 24,
+      "rating": 7.9,
+      "release_year": 2021,
+      "studio": "Kinetic Drive Animation"
+    },
+    {
+      "id": 3,
+      "title": "Dreamscape Pulse",
+      "genre": ["Sci-Fi", "Mystery", "Psychological"],
+      "episodes": 13,
+      "rating": 9.1,
+      "release_year": 2022,
+      "studio": "NeonInk Works"
+    }
+  ]
+}

@@ -41,10 +41,10 @@ async function greet() {
   //   });
 }
 
-let greetPromise = greet();
-greetPromise.then((value) => {
-  console.log(value);
-});
+// let greetPromise = greet();
+// greetPromise.then((value) => {
+//   console.log(value);
+// });
 // console.log(greetPromise);
 
 // --- Custom Error Handling ---
@@ -74,37 +74,117 @@ greetPromise.then((value) => {
 // console.log("Script is running")
 
 // Finally Clause // runs everytime if there is an error in catch block or the try block
-try {
-  let a = 4;
-  console.log(program);
-  console.log("Program ran successfully");
-} catch (errors) {
-  console.log(errors);
-  console.log(errors.name);
-  console.log(errors.message);
-  console.log(errors.stack);
-} finally {
-  console.log("Finally Clause is running");
-}
+// try {
+//   let a = 4;
+//   console.log(program);
+//   console.log("Program ran successfully");
+// } catch (errors) {
+//   console.log(errors);
+//   console.log(errors.name);
+//   console.log(errors.message);
+//   console.log(errors.stack);
+// } finally {
+//   console.log("Finally Clause is running");
+// }
 
 // ----
-const p = new Promise((res, rej) => {
-  res(1);
-});
+// const p = new Promise((res, rej) => {
+//   res(1);
+// });
 
-async function asyncReturn() {
-  return p; 
-}
+// async function asyncReturn() {
+//   return p;
+// }
 
-function basicReturn() {
-  return Promise.resolve(p);
-}
+// function basicReturn() {
+//   return Promise.resolve(p);
+// }
 
-console.log(p); // returns the fulfilled promise with its prototype, promise state and the promise result
-console.log("p"); // returns a value as a string
-console.log(p === basicReturn()); // true
-console.log(p === asyncReturn()); // false
-console.log(asyncReturn === basicReturn); // false
+// console.log(p); // returns the fulfilled promise with its prototype, promise state and the promise result
+// console.log("p"); // returns a value as a string
+// console.log(p === basicReturn()); // true
+// console.log(p === asyncReturn()); // false
+// console.log(asyncReturn === basicReturn); // false
+
+// Using Promises
+// let promise = new Promise((resolve, reject) => {
+//   let res = fetch("https://jsonplaceholder.typicode.com/todos/");
+//   resolve(res);
+// });
+
+// promise
+//   .then((res) => {
+//     res.json();
+//   })
+//   .then((data) => {
+//     try {
+//       console.log(data);
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// // using custom promise to fetch data from an api
+// let customPromise = new Promise((resolve, reject) => {
+//   fetch("https://jsonplaceholder.typicode.com/todos/")
+//     .then(resolve)
+//     .catch(reject);
+// });
+
+// customPromise
+//   .then((res) => res.json())
+//   .then((data) => {
+//     try {
+//       console.log(data);
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// Using promise method to fetch data from an api
+setTimeout(() => {
+  let promise = fetch("https://jsonplaceholder.typicode.com/todos/");
+  // let promiseTwo = fetch("https://api.github.com/users/octocat");
+  promise
+    .then((res) => res.json())
+    .then((data) => {
+      try {
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}, 3000);
+
+// using async await to fetch data from an api
+let apiData = async () => {
+  try {
+    let response = await fetch("https://api.github.com/users/octocat");
+    // let responseTwo = await fetch("https://jsonplaceholder.typicode.com/todos/")
+    // console.log(response)
+
+    let data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    console.log(data);
+  } catch (error) {
+    console.log("Error fetching data:", error);
+  }
+};
+
+apiData();
 
 // ...  JS - PRACTICE  ...
 
@@ -175,3 +255,14 @@ console.log(asyncReturn === basicReturn); // false
 //   const element = key;
 //   console.log(element);
 // }
+
+// How would you fix it?
+function calculateSum(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+console.log(calculateSum([2, 4, 6]));
+// calculateSum();
