@@ -148,22 +148,41 @@ async function greet() {
 //   });
 
 // Using promise method to fetch data from an api
-setTimeout(() => {
-  let promise = fetch("https://jsonplaceholder.typicode.com/todos/");
-  // let promiseTwo = fetch("https://api.github.com/users/octocat");
-  promise
-    .then((res) => res.json())
-    .then((data) => {
-      try {
-        console.log(data);
-      } catch (err) {
-        console.log(err);
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}, 3000);
+// setTimeout(() => {
+//   let promise = fetch("https://jsonplaceholder.typicode.com/todos/");
+//   // let promiseTwo = fetch("https://api.github.com/users/octocat");
+//   promise
+//     .then((res) => res.json())
+//     .then((data) => {
+//       try {
+//         console.log(data);
+//       } catch (err) {
+//         console.log(err);
+//       }
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// }, 3000);
+
+// another function using the promises
+function mydata() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { name: "Moeez", age: 23 };
+      resolve(data);
+      console.log(data);
+    }, 2000);
+  });
+}
+
+mydata()
+  .then((data) => {
+    console.log("User data is:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 
 // using async await to fetch data from an api
 let apiData = async () => {
@@ -187,22 +206,37 @@ let apiData = async () => {
 apiData();
 
 // using an IIFE for fetching data through an api
-(async function () {
+// (async function () {
+//   try {
+//     const response = await fetch(
+//       "https://jsonplaceholder.typicode.com/todos/1"
+//     );
+//     const json = await response.json();
+//     if (json.userId == 1) {
+//       json.completed == false;
+//     } else {
+//       json.completed == true;
+//     }
+//     console.log(json);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// })();
+
+// async named function using fetch api
+async function fetchData() {
   try {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/todos/1"
+    const fetchResponse = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/"
     );
-    const json = await response.json();
-    if (json.userId == 1) {
-      json.completed == false;
-    } else {
-      json.completed == true;
-    }
-    console.log(json);
+    const dataFetch = await fetchResponse.json();
+    console.log(dataFetch);
   } catch (error) {
     console.log(error);
   }
-})();
+}
+
+fetchData();
 
 // ...  JS - PRACTICE  ...
 
