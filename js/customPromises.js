@@ -43,6 +43,8 @@
 // setTimeout(() => {
 //   let promise = fetch("https://jsonplaceholder.typicode.com/todos/");
 //   // let promiseTwo = fetch("https://api.github.com/users/octocat");
+//  // let promiseThree = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
+// // let promiseFour = fetch("https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json")
 //   promise
 //     .then((res) => res.json())
 //     .then((data) => {
@@ -105,6 +107,7 @@ promiseArray
     console.log(arrayData[0]);
     console.log(arrayData[1]);
     console.log(arrayData[2]);
+    console.log(arrayData[3]); // undefined
   })
   .catch((error) => {
     console.log(error);
@@ -203,5 +206,29 @@ fetchUser
     console.log(result);
   })
   .catch((error) => {
-    console.log(error)
+    console.log(error);
+  });
+
+// custom promise 📌✅🔧🖥️🧠🔁🔄🧪🔹🧱🔥🟢🟡🔴
+let customPromise = new Promise((resolve, reject) => {
+  let customData = [
+    { id: 1, name: "Moeez", age: 23 },
+    { id: 2, name: "Rameez", age: 21 },
+    { id: 3, name: "Zaid", age: 17 },
+  ];
+  resolve(customData);
+});
+
+customPromise
+  .then((result) => {
+    console.log(result);
+    console.log(result[0]);
+    console.log(result[1]);
+    console.log(result[2]);
+    console.log(result[2].id);
+    console.log(result[2].name);
+    console.log(result[2].age);
+  })
+  .catch((error) => {
+    console.log(error);
   });
