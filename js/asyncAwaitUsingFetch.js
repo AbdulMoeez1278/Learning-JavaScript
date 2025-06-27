@@ -11,6 +11,7 @@ let apiData = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
+    console.log(typeof data);
     console.log(data);
   } catch (error) {
     console.log("Error fetching data:", error);
@@ -44,7 +45,9 @@ async function fetchData() {
       "https://jsonplaceholder.typicode.com/todos/"
     );
     const dataFetch = await fetchResponse.json();
+    console.log(typeof dataFetch);
     console.log(dataFetch);
+    console.log(dataFetch[47].title);
   } catch (error) {
     console.log(error);
   }
@@ -66,12 +69,41 @@ async function fetchProducts() {
     // after this line, our function will wait for the `response.json()` call to be settled
     // the `response.json()` call will either return the parsed JSON object or throw an error
     const data = await response.json();
+    console.log(typeof data);
     console.log(data);
     console.log(data[0].name);
+    console.log(data[3].price);
     console.log(data[7].type);
+    console.log(data[10].image);
   } catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
 
 fetchProducts();
+
+// another async await using fetch api
+let getData = async () => {
+  try {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    let data = await response.json();
+    console.log(typeof data);
+    console.log(data);
+    // console.log(JSON.stringify(data))
+
+    console.log(data.userId);
+    console.log(data.id);
+
+    console.log(data.title);
+    console.log(data.completed);
+  } catch (error) {
+    console.log("Error fetching data:", error);
+  }
+};
+
+getData();
