@@ -1,6 +1,6 @@
 // XMLHttpRequest
 
-// Create a new XMLHttpRequest object
+// // Create a new XMLHttpRequest object
 // let xhr = new XMLHttpRequest(); // this constructor has no arguments | parameters
 
 // // Define the callback function to handle the response
@@ -74,3 +74,33 @@ xhr.onprogress = function (event) {
 xhr.onerror = function () {
   console.log("Request failed");
 };
+
+// synchronous XMLHttpRequest
+let xhrequest = new XMLHttpRequest();
+
+xhrequest.open("GET", "data.txt", false);
+
+try {
+  xhrequest.send();
+  if (xhrequest.status != 200) {
+    console.log(`Error ${xhrequest.status}: ${xhrequest.statusText}`);
+  } else {
+    console.log(xhrequest.response);
+  }
+} catch (err) {
+  // instead of onerror
+  console.log("Request failed");
+}
+
+// // POST, FormData
+// let xhrPostData = new XMLHttpRequest();
+
+// let json = JSON.stringify({
+//   name: "John",
+//   surname: "Smith",
+// });
+
+// xhrPostData.open("POST", "data.txt");
+// xhrPostData.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+// xhrPostData.send(json);
