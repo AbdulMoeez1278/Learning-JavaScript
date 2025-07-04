@@ -74,7 +74,7 @@ let globalVariable = "I am global"; // global scope
 
 // When functions are nested each other, the inner function can access variables from the outer function.
 function outerFunction() {
-  let outerVariable = "I am outer"; // local scope
+  let outerVariable = "I am an outer"; // local scope
 
   function innerFunction() {
     let innerVariable = "I am inner"; // local scope
@@ -89,20 +89,20 @@ function outerFunction() {
 
 outerFunction();
 
-// // closure with setTimeout
-// function delayedMessage(message, delay) {
-//   return function () {
-//     setTimeout(() => {
-//       console.log(message);
-//     }, delay);
-//   };
-// }
+// closure with setTimeout
+function delayedMessage(message, delay) {
+  return function () {
+    setTimeout(() => {
+      console.log(message);
+    }, delay);
+  };
+}
 
-// const showMessage = delayedMessage(
-//   "This message appears after 2 seconds!",
-//   2000
-// );
-// showMessage();
+const showMessage = delayedMessage(
+  "This message appears after 2 seconds!",
+  2000
+);
+showMessage();
 
 // // Nested Functions
 // outer function
