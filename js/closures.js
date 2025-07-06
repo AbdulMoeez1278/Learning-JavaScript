@@ -33,7 +33,7 @@ function getName() {
 getName();
 
 let fetchName = getName();
-// console.log(fetchName); // returns undefined
+console.log(fetchName); // returns undefined
 
 // console.log(getName); // returns a complete function as an output
 // console.log(getName()); // returns undefined also
@@ -43,6 +43,7 @@ function makeFunc() {
   const name = "Moeez";
   function displayName() {
     console.log(name); // prints the name if functions runs accurately
+
     // return name;
   }
   return displayName;
