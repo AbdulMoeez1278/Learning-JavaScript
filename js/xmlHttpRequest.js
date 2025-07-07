@@ -108,7 +108,7 @@ xhrPostData.onerror = function (error) {
 };
 
 xhrPostData.send(json);
-// console.log(xhrPostData);
+console.log(xhrPostData);
 
 let bodyJson = (document.getElementById("myText").innerHTML = json);
 console.log(bodyJson);
@@ -141,7 +141,7 @@ xmlObj.done(function () {
 });
 
 // console.log(xmlObj);
-// console.log(xmlObj.url); // undefined
+console.log(xmlObj.url); // undefined
 
 // Get xmlHttpRequest example
 const xhrRequest = new XMLHttpRequest();
@@ -234,5 +234,3 @@ xhrDel.onerror = function () {
 };
 // Send the request
 xhrDel.send();
-
-// Write a compelling caption for your post, explaining what the carousel is about and why people should engage with it.
