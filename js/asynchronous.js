@@ -18,20 +18,20 @@ thirdTask();
 
 // synchronus programming example
 
-// function someLongRunningFunction() {
-//   let start = Date.now();
-//   while (Date.now() - start < 5000) {
-// do nothing
-//   }
-//   return "Hello";
-// }
+function someLongRunningFunction() {
+  let start = Date.now();
+  while (Date.now() - start < 5000) {
+    // do nothing
+  }
+  return "Hello";
+}
 
-// console.log("Starting...");
+console.log("Starting...");
 
-// let result = someLongRunningFunction();
-// console.log(result);
+let result = someLongRunningFunction();
+console.log(result);
 
-// console.log("...Finishing");
+console.log("...Finishing");
 
 // asynchronous programming
 console.log("Start of script");
@@ -53,6 +53,7 @@ console.log("End of script");
 // callback function to be executed on timeout
 setTimeout(myFunction, 5000); // myFunction is passed to setTimeout as an argument
 
-function myFunction() { // myFunction is used as a callback
+function myFunction() {
+  // myFunction is used as a callback
   document.getElementById("myText").innerHTML = "Hello World!!";
 }
