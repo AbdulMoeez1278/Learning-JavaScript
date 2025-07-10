@@ -1,5 +1,5 @@
 // // Higher Order Array Loops
-// const numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 // // Using forEach to iterate over the array and log each number
 // numbers.forEach((number) => {
 //   console.log("Number:", number);
@@ -64,13 +64,13 @@
 // const allGreaterThanZero = numbers.every((number) => number > 0);
 // console.log("All Numbers Greater Than 0:", allGreaterThanZero); // Output: All Numbers Greater Than 0: true
 
-// // Using sort to sort the numbers in ascending order
-// const sortedNumbers = numbers.slice().sort((a, b) => a - b);
-// console.log("Sorted Numbers:", sortedNumbers); // Output: Sorted Numbers: [1, 2, 3, 4, 5]
+// Using sort to sort the numbers in ascending order
+const sortedNumbers = numbers.slice().sort((a, b) => a - b);
+console.log("Sorted Numbers:", sortedNumbers); // Output: Sorted Numbers: [1, 2, 3, 4, 5]
 
-// // Using sort to sort the numbers in descending order
-// const sortedNumbersDesc = numbers.slice().sort((a, b) => b - a);
-// console.log("Sorted Numbers Descending:", sortedNumbersDesc); // Output: Sorted Numbers Descending: [5, 4, 3, 2, 1]
+// Using sort to sort the numbers in descending order
+const sortedNumbersDesc = numbers.slice().sort((a, b) => b - a);
+console.log("Sorted Numbers Descending:", sortedNumbersDesc); // Output: Sorted Numbers Descending: [5, 4, 3, 2, 1]
 
 // higher order functions
 const higherNumbers = [1, 2, 3];
@@ -89,3 +89,16 @@ function createMultiplier(factor) {
 
 const multiplyByFive = createMultiplier(5);
 console.log(multiplyByFive(5));
+document.write(multiplyByFive(10));
+
+// hoistedFunction(); // This works because hoistedFunction is hoisted
+
+// function hoistedFunction() {
+//   console.log("Hello from hoisted function!");
+// }
+
+// notHoistedFunction(); // This would cause an error because notHoistedFunction is not yet defined
+
+// const notHoistedFunction = function () {
+//   console.log("Hello from not hoisted function");
+// };
