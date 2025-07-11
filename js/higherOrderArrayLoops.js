@@ -60,9 +60,9 @@ const numbers = [1, 2, 3, 4, 5];
 // const allLessThanTen = numbers.every((number) => number < 10);
 // console.log("All Numbers Less Than 10:", allLessThanTen); // Output: All Numbers Less Than 10: true
 
-// // Using every to check if all numbers are greater than 0
-// const allGreaterThanZero = numbers.every((number) => number > 0);
-// console.log("All Numbers Greater Than 0:", allGreaterThanZero); // Output: All Numbers Greater Than 0: true
+// Using every to check if all numbers are greater than 0
+const allGreaterThanZero = numbers.every((number) => number > 0);
+console.log("All Numbers Greater Than 0:", allGreaterThanZero); // Output: All Numbers Greater Than 0: true
 
 // Using sort to sort the numbers in ascending order
 const sortedNumbers = numbers.slice().sort((a, b) => a - b);
