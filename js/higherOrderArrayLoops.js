@@ -52,13 +52,13 @@ const numbers = [1, 2, 3, 4, 5];
 // const hasNumberGreaterThanFive = numbers.some((number) => number > 5);
 // console.log("Has Number Greater Than 5:", hasNumberGreaterThanFive); // Output: Has Number Greater Than 5: false
 
-// // Using some to check if there is any even number
-// const hasEvenNumber = numbers.some((number) => number % 2 === 0);
-// console.log("Has Even Number:", hasEvenNumber); // Output: Has Even Number: true
+// Using some to check if there is any even number
+const hasEvenNumber = numbers.some((number) => number % 2 === 0);
+console.log("Has Even Number:", hasEvenNumber); // Output: Has Even Number: true
 
-// // Using every to check if all numbers are less than 10
-// const allLessThanTen = numbers.every((number) => number < 10);
-// console.log("All Numbers Less Than 10:", allLessThanTen); // Output: All Numbers Less Than 10: true
+// Using every to check if all numbers are less than 10
+const allLessThanTen = numbers.every((number) => number < 10);
+console.log("All Numbers Less Than 10:", allLessThanTen); // Output: All Numbers Less Than 10: true
 
 // Using every to check if all numbers are greater than 0
 const allGreaterThanZero = numbers.every((number) => number > 0);
