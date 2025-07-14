@@ -152,6 +152,7 @@ let keyObject = {
 
 function keysNumber(obj) {
   return Object.keys(obj).length;
+  // console.log(Object.keys(obj).length);
 }
 
 console.log("Number of keys are:", keysNumber(keyObject)); // Output: 3
