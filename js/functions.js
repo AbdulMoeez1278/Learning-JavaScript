@@ -196,7 +196,6 @@ updateBrand(car);
 // updateBrand mutates car
 console.log(car.brand); // Toyota
 
-
 // This function returns a string padded with leading zeros
 function padZeros(num, totalLen) {
   let numStr = num.toString(); // Initialize return value as string
@@ -206,3 +205,11 @@ function padZeros(num, totalLen) {
   }
   return numStr;
 }
+
+let result;
+result = padZeros(10, 4);
+// result = padZeros(42, 2);
+// result = padZeros(5, 4);
+
+document.write(result);
+console.log(result);
