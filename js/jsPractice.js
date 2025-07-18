@@ -65,7 +65,7 @@ console.log(repeatText);
 let strLength = strText2.length; // returns the length of the text in numbers
 console.log(strLength);
 
-// Arrays - are object types that are used for storing data collections
+// Arrays - are object types that are used for storing data collections || special types of object
 let arr = [];
 console.log(arr);
 
@@ -91,3 +91,130 @@ console.log(arr3);
 
 arr3[2] = "TS"; // element at index 2
 console.log(arr3);
+
+// looping array elements
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let fruitsText = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  fruitsText += "<li>" + fruits[i] + "</li>";
+}
+fruitsText += "</ul>";
+
+console.log(fruitsText);
+
+// looping thrrough forEach function
+const fruitsArr = ["Banana", "Orange", "Apple", "Mango"];
+
+let textFruits = "<ul>";
+fruitsArr.forEach(myFunction);
+textFruits += "</ul>";
+
+function myFunction(value) {
+  textFruits += "<li>" + value + "</li>";
+}
+
+console.log("Ul list of fruits", textFruits);
+console.log(textFruits);
+
+// typeof operator
+console.log(typeof fruitsArr); // object
+
+// es5 new method
+console.log(Array.isArray(fruitsArr));
+
+// array methods
+const fruitsArray = ["Banana", "Orange", "Apple", "Mango"];
+
+// length() method
+let size = fruitsArray.length;
+console.log(size);
+
+// toString() method
+let myList = fruitsArray.toString();
+console.log(myList);
+
+// getting objects data from an array
+let arrArray = [
+  {
+    id: 1,
+    title: "Celestial Chronicles",
+    genre: ["Action", "Fantasy"],
+    episodes: 12,
+    rating: 8.6,
+    release_year: 2023,
+    studio: "StarForge Studios",
+    data: {
+      id: 3,
+      title: "Dreamscape Pulse",
+      genre: ["Sci-Fi", "Mystery", "Psychological"],
+      episodes: 13,
+      rating: 9.1,
+      release_year: 2022,
+      studio: "NeonInk Works",
+    },
+  },
+  {
+    id: 2,
+    title: "Tokyo Drift Spirits",
+    genre: ["Sports", "Drama"],
+    episodes: 24,
+    rating: 7.9,
+    release_year: 2021,
+    studio: "Kinetic Drive Animation",
+    data: {
+      id: 1,
+      title: "Celestial Chronicles",
+      genre: ["Action", "Fantasy"],
+      episodes: 12,
+      rating: 8.6,
+      release_year: 2023,
+      studio: "StarForge Studios",
+    },
+  },
+  {
+    id: 3,
+    title: "Dreamscape Pulse",
+    genre: ["Sci-Fi", "Mystery", "Psychological"],
+    episodes: 13,
+    rating: 9.1,
+    release_year: 2022,
+    studio: "NeonInk Works",
+    data: {
+      id: 2,
+      title: "Tokyo Drift Spirits",
+      genre: ["Sports", "Drama"],
+      episodes: 24,
+      rating: 7.9,
+      release_year: 2021,
+      studio: "Kinetic Drive Animation",
+    },
+  },
+];
+
+console.log(arrArray[0]); // returns the first object in an array
+console.log(arrArray[0].title); // returns the title of the first object in an array
+console.log(arrArray[0].data.release_year);
+console.log(arrArray[0].data.id); // returns the id of the nested object from the first object in an array
+
+console.log(arrArray[1]);
+console.log(arrArray[1].episodes);
+console.log(arrArray[1].rating);
+
+console.log(arrArray[2]);
+console.log(arrArray[2].genre);
+console.log(arrArray[2].studio);
+
+// Array at() method
+const arrayOfFruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = arrayOfFruits.at(2); // returns the element not the index
+console.log(fruit);
+
+let fruit2 = arrayOfFruits[3]; // returns the array element at the following index
+console.log(fruit2);
+
+// join() method
+let myText = (document.getElementById("myText").innerHTML =
+  arrayOfFruits.join(" * "));
+console.log(myText);
