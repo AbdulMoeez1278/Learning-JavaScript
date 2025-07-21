@@ -195,8 +195,8 @@ let arrArray = [
 
 console.log(arrArray[0]); // returns the first object in an array
 console.log(arrArray[0].title); // returns the title of the first object in an array
-console.log(arrArray[0].data.release_year);
-console.log(arrArray[0].data.id); // returns the id of the nested object from the first object in an array
+// console.log(arrArray[0].data.release_year);
+// console.log(arrArray[0].data.id); // returns the id of the nested object from the first object in an array
 
 console.log(arrArray[1]);
 console.log(arrArray[1].episodes);
@@ -218,3 +218,66 @@ console.log(fruit2);
 let myText = (document.getElementById("myText").innerHTML =
   arrayOfFruits.join(" * "));
 console.log(myText);
+
+// closure example:
+function createCounter() {
+  let count = 0; // This variable is in the outer scope
+
+  return function () {
+    // This inner function is the closure
+    count++;
+    return count;
+  };
+}
+
+const counter1 = createCounter();
+console.log(counter1()); // Output: 1
+console.log(counter1()); // Output: 2
+// document.write(counter1()); // Output: 3
+
+const counter2 = createCounter(); // Creates a new independent closure
+console.log(counter2()); // Output: 1
+// document.write(counter2()); // Output: 2
+
+// another closures example
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log(`Outer variable: ${outerVariable}`);
+    console.log(`Inner variable: ${innerVariable}`);
+    document.write(`${outerVariable} ${innerVariable}`);
+  };
+}
+
+const myClosure = outerFunction("Hello");
+myClosure("World");
+// document.write(myClosure("Hello")); // returns undefined
+
+// promises example:
+let myPromise = new Promise((resolve, reject) => {
+  // Simulate an asynchronous operation
+  setTimeout(() => {
+    let success = true; // Or false for rejection
+    if (success) {
+      resolve("Operation completed successfully!");
+    } else {
+      reject("Operation failed!");
+    }
+  }, 2000);
+});
+
+myPromise
+  .then((message) => {
+    console.log(message); // "Operation completed successfully!"
+  })
+  .catch((error) => {
+    console.error(error); // "Operation failed!"
+  })
+  .finally(() => {
+    console.log("Promise settled.");
+  });
+
+// console.log(myPromise);
+
+let myProm = myPromise;
+console.log(myProm);
+// document.write(myProm);
