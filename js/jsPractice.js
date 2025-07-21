@@ -252,6 +252,16 @@ const myClosure = outerFunction("Hello");
 myClosure("World");
 // document.write(myClosure("Hello")); // returns undefined
 
+// x is not defined
+let x;
+if (Math.random() > 0.5) {
+  const x = 1;
+} else {
+  const x = 2;
+}
+console.log(x); // ReferenceError: x is not defined
+
+
 // promises example:
 let myPromise = new Promise((resolve, reject) => {
   // Simulate an asynchronous operation
