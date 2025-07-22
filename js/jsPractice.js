@@ -252,6 +252,22 @@ const myClosure = outerFunction("Hello");
 myClosure("World");
 // document.write(myClosure("Hello")); // returns undefined
 
+// closure example
+let outerFunc = function outer() {
+  let outerVar = "I'm in the outer scope!";
+  function inner() {
+    console.log(outerVar);
+  }
+  return inner;
+};
+
+const closure = outerFunc();
+closure();
+
+// const closure = outerFunc; // returns undefined
+// console.log(outerFunc); // returns undefined
+// const closure = outer();
+
 // x is not defined
 let x;
 if (Math.random() > 0.5) {
@@ -260,34 +276,34 @@ if (Math.random() > 0.5) {
   const x = 2;
 }
 console.log(x); // ReferenceError: x is not defined
+// document.write(x);
 
+// // promises example:
+// let myPromise = new Promise((resolve, reject) => {
+//   // Simulate an asynchronous operation
+//   setTimeout(() => {
+//     let success = true; // Or false for rejection
+//     if (success) {
+//       resolve("Operation completed successfully!");
+//     } else {
+//       reject("Operation failed!");
+//     }
+//   }, 2000);
+// });
 
-// promises example:
-let myPromise = new Promise((resolve, reject) => {
-  // Simulate an asynchronous operation
-  setTimeout(() => {
-    let success = true; // Or false for rejection
-    if (success) {
-      resolve("Operation completed successfully!");
-    } else {
-      reject("Operation failed!");
-    }
-  }, 2000);
-});
+// myPromise
+//   .then((message) => {
+//     console.log(message); // "Operation completed successfully!"
+//   })
+//   .catch((error) => {
+//     console.error(error); // "Operation failed!"
+//   })
+//   .finally(() => {
+//     console.log("Promise settled.");
+//   });
 
-myPromise
-  .then((message) => {
-    console.log(message); // "Operation completed successfully!"
-  })
-  .catch((error) => {
-    console.error(error); // "Operation failed!"
-  })
-  .finally(() => {
-    console.log("Promise settled.");
-  });
+// // console.log(myPromise);
 
-// console.log(myPromise);
-
-let myProm = myPromise;
-console.log(myProm);
-// document.write(myProm);
+// let myProm = myPromise;
+// console.log(myProm);
+// // document.write(myProm);
