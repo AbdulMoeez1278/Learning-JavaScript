@@ -307,3 +307,20 @@ console.log(x); // ReferenceError: x is not defined
 // let myProm = myPromise;
 // console.log(myProm);
 // // document.write(myProm);
+
+// Destructuring
+let a1, b2, rest;
+[a1, b2] = [10, 20];
+
+console.log(a1);
+console.log(b2);
+
+[a1, b2, ...rest] = [10, 20, 30, 40, 50];
+console.log(rest);
+
+const colors = ["red", "green", "blue"];
+const [firstColor, secondColor, thirdColor] = colors;
+
+console.log(firstColor); // Output: red
+console.log(secondColor); // Output: green
+console.log(thirdColor); // Output: blue
