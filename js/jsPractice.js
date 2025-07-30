@@ -324,3 +324,8 @@ const [firstColor, secondColor, thirdColor] = colors;
 console.log(firstColor); // Output: red
 console.log(secondColor); // Output: green
 console.log(thirdColor); // Output: blue
+
+// Binding in js
+// 1: Variable Binding
+// 2: Function Binding
+// 3: Lexical Binding
