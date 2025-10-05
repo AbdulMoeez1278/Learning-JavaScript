@@ -73,15 +73,12 @@ This repository is open for contributions — whether corrections, improvements,
 
 📬 Connect with Me
 GitHub: @AbdulMoeez1278
-
-LinkedIn: [linkedin.com/in/abdulmoeez1278](https://www.linkedin.com/in/abdul-moeez-tariq)
-
+LinkedIn: [linkedin.com/in/abdul-moeez-tariq](https://www.linkedin.com/in/abdul-moeez-tariq)
 Email: abdulmoeez1278@gmail.com
 
 Thank you for stopping by! Every commit is a step forward. 🌱
 
 yaml
-
 Copy code
 
 ---
@@ -94,4 +91,3 @@ Copy code
 - It shows your **progressive mindset** — you’re not just learning; you’re planning to level up.  
 
 If you want badges (build status, complexity, lines of code), a demo link, or visual examples (screenshots, GIFs) added, I can help with that too!
-::contentReference[oaicite:0]{index=0}
