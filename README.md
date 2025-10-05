@@ -74,7 +74,7 @@ This repository is open for contributions — whether corrections, improvements,
 📬 Connect with Me
 GitHub: @AbdulMoeez1278
 
-LinkedIn: linkedin.com/in/abdulmoeez1278
+LinkedIn: [linkedin.com/in/abdulmoeez1278](https://www.linkedin.com/in/abdul-moeez-tariq)
 
 Email: abdulmoeez1278@gmail.com
 
