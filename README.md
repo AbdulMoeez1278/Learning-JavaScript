@@ -73,12 +73,15 @@ This repository is open for contributions — whether corrections, improvements,
 
 📬 Connect with Me
 GitHub: @AbdulMoeez1278
+
 LinkedIn: [linkedin.com/in/abdul-moeez-tariq](https://www.linkedin.com/in/abdul-moeez-tariq)
+
 Email: abdulmoeez1278@gmail.com
 
 Thank you for stopping by! Every commit is a step forward. 🌱
 
 yaml
+
 Copy code
 
 ---
