@@ -1,6 +1,13 @@
-# Learning JavaScript 🚀
+# Learning JavaScript 🚀  
 
-Welcome to my **JavaScript learning journey**! This repository documents my growth from fundamentals to intermediate and advanced topics. I’m building hands-on examples, mini projects, and experiments to deeply understand how JavaScript works in real-world applications.
+![GitHub repo size](https://img.shields.io/github/repo-size/AbdulMoeez1278/Learning-JavaScript?color=blue)  
+![GitHub last commit](https://img.shields.io/github/last-commit/AbdulMoeez1278/Learning-JavaScript?color=brightgreen)  
+![GitHub stars](https://img.shields.io/github/stars/AbdulMoeez1278/Learning-JavaScript?style=social)  
+![GitHub forks](https://img.shields.io/github/forks/AbdulMoeez1278/Learning-JavaScript?style=social)  
+
+Welcome to my **JavaScript learning journey**! This repository documents my growth from fundamentals to intermediate and advanced topics. I’m building hands-on examples, mini projects, and experiments to deeply understand how JavaScript works in real-world applications.  
+
+Every commit = a new concept learned ✅  
 
 ---
 
@@ -28,6 +35,16 @@ Welcome to my **JavaScript learning journey**! This repository documents my grow
 - To **learn by doing**: Theory matters, but applying it in projects helps retention.  
 - To **share progress**: Anyone can follow along, learn, fork, or contribute.  
 - To build a **solid JavaScript foundation** before diving deeper into frameworks or full-stack development.
+
+---
+
+## 📸 Preview (Examples)
+
+### ✅ To-Do List App
+<img src="https://via.placeholder.com/600x300.png?text=To-Do+App+Preview" alt="To Do App Preview" />
+
+### ✅ Simple Calculator
+<img src="https://via.placeholder.com/600x300.png?text=Calculator+Preview" alt="Calculator Preview" />
 
 ---
 
@@ -68,8 +85,10 @@ Explore TypeScript for stronger typing
 
 Use JavaScript in frameworks like React or Node.js
 
-🤝 Contributions & Collaboration
-This repository is open for contributions — whether corrections, improvements, new examples, or challenges. Feel free to fork, open issues, or submit pull requests. Let’s grow together!
+🤝 Contributions
+
+I’m open to suggestions, corrections, and ideas!
+If you’re also learning JavaScript, feel free to fork this repo, try out challenges, or open an issue.
 
 📬 Connect with Me
 GitHub: @AbdulMoeez1278
@@ -78,19 +97,10 @@ LinkedIn: [linkedin.com/in/abdul-moeez-tariq](https://www.linkedin.com/in/abdul-
 
 Email: abdulmoeez1278@gmail.com
 
+🌱 Final Note
+
+This repo is not about perfection — it’s about progress.
+Every script here reflects a step forward in mastering JavaScript.
+
 Thank you for stopping by! Every commit is a step forward. 🌱
-
-yaml
-
-Copy code
-
----
-
-### Why this Works:
-
-- It **speaks like a human** — not dry, but clear and motivational.  
-- It’s **structured and easy to scan** — so visitors see the value immediately.  
-- It’s **SEO-friendly** with key terms like “JavaScript learning”, “DOM”, “mini projects”, “tools”, etc.  
-- It shows your **progressive mindset** — you’re not just learning; you’re planning to level up.  
-
-If you want badges (build status, complexity, lines of code), a demo link, or visual examples (screenshots, GIFs) added, I can help with that too!
+If you find it useful, ⭐ the repo and follow along with my journey!
