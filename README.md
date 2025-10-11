@@ -65,37 +65,45 @@ Every commit = a new concept learned ✅
    git clone https://github.com/AbdulMoeez1278/Learning-JavaScript.git
 Navigate into the folder
 
-bash
-Copy code
 cd Learning-JavaScript
+
 Open the file you want to explore (e.g. index.html or .js files) in your browser or via VS Code Live Server.
 
 Tinker, experiment, break things, and learn — that’s the point!
 
+---
+
 📈 Roadmap & Next Milestones
 Build REST API integrations (fetch, axios) to connect with backend services
 
-Practice error handling & debugging techniques
+• Practice error handling & debugging techniques
 
-Create modular JavaScript architectures (modules, import/export)
+• Create modular JavaScript architectures (modules, import/export)
 
-Begin unit testing JavaScript functions
+• Begin unit testing JavaScript functions
 
-Explore TypeScript for stronger typing
+• Explore TypeScript for stronger typing
 
-Use JavaScript in frameworks like React or Node.js
+• Use JavaScript in frameworks like React or Node.js
+
+---
 
 🤝 Contributions
 
 I’m open to suggestions, corrections, and ideas!
 If you’re also learning JavaScript, feel free to fork this repo, try out challenges, or open an issue.
 
+---
+
 📬 Connect with Me
+
 GitHub: @AbdulMoeez1278
 
 LinkedIn: [linkedin.com/in/abdul-moeez-tariq](https://www.linkedin.com/in/abdul-moeez-tariq)
 
 Email: abdulmoeez1278@gmail.com
+
+---
 
 🌱 Final Note
 
