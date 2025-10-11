@@ -110,5 +110,7 @@ Email: abdulmoeez1278@gmail.com
 This repo is not about perfection — it’s about progress.
 Every script here reflects a step forward in mastering JavaScript.
 
+---
+
 Thank you for stopping by! Every commit is a step forward. 🌱
 If you find it useful, ⭐ the repo and follow along with my journey!
